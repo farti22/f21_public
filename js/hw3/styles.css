@@ -1,0 +1,92 @@
+.center {
+	margin:  auto;
+	text-align: center;
+}
+
+body {
+	font-family: Arial;
+  background: linear-gradient(to top left, #ccff99 -30%, #ffffff 50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main {
+	border-radius: 8px;
+	width: 400px;
+	margin: 0 auto;
+	padding: 16 8 4 8;
+}
+
+.todo{
+	background: #bfdf9c;
+}
+
+.editor{
+	margin-top: 8;
+	background: #bfdf9c;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+	margin: 6;
+	padding: 8 8 8 8;
+	background: #ededdd;
+}
+li:hover {
+	background: #e8e8c1;
+	cursor: pointer;
+}
+
+.opened {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin: 8 0 0 0;
+	font-weight: bold;
+	font-size: 120%
+}
+
+.but {
+	cursor: pointer;
+	background: #c3ca6d;
+	margin: 6;
+	border-radius: 0px;
+}
+.but:hover {
+	background: #ff6152;
+}
+
+#buttons {
+	display: flex;
+	justify-content: center;
+}
+#buttons .but  {
+	padding: 4 8 4 8;
+}
+
+.inp {
+	padding: 2%;
+	margin: 8;
+	background: #ededdd;
+}
+
+.icon32 {
+	width: 32px;
+	border-radius: 16px;
+}
+
+.time {
+	vertical-align: middle;
+	background: #86ab6d;
+	margin: 6;
+}
+.time p {
+	font-size: 54%;
+	padding-left: 12px;
+	padding-right: 12px;
+}
