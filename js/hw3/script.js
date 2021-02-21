@@ -72,7 +72,7 @@ function createAndAppend( name, value, parent){
           parent.removeChild(el);
           localStorage.removeItem( value );
         }
-  		}
+      }
       let timeLeft = el.children[0].children[1];
       let interID = setInterval(() => {
         now = new Date();
