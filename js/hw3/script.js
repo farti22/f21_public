@@ -37,20 +37,20 @@ window.addEventListener('load', function () {
 
   butClear.addEventListener('click', function (){
   	if ( confirm("You are sure?") ) {
-  		list.innerHTML = '';
-  		localStorage.clear();
-  	}
-	})
+      list.innerHTML = '';
+      localStorage.clear();
+    }
+  })
 })
 
 var opened = '<div class = "opened"> \
-			<div class = "but icon32"> \
-			<img src="icon_delete.png"> \
-			</div> \
-			<div class = "time">\
-				<p>Loading</p>\
-			</div>\
-		</div>'
+  <div class = "but icon32"> \
+	<img src="icon_delete.png"> \
+	</div> \
+	<div class = "time">\
+	<p>Loading</p>\
+	</div>\
+	</div>'
 
 function msToTime(s) { //https://stackoverflow.com/questions/9763441/milliseconds-to-time-in-javascript/9763479
   var pad = (n) => ('00' + n).slice(-2);
@@ -73,8 +73,8 @@ function createAndAppend( name, value, parent){
           localStorage.removeItem( value );
         }
   		}
-  		let timeLeft = el.children[0].children[1];
-  		let interID = setInterval(() => {
+      let timeLeft = el.children[0].children[1];
+      let interID = setInterval(() => {
         now = new Date();
         let future = new Date( localStorage.getItem( value ) )
         let left = future.getTime() - now.getTime()
@@ -82,11 +82,11 @@ function createAndAppend( name, value, parent){
         if ( this.innerHTML.indexOf("opened") === -1 || timeLeft.innerHTML == "<p>Time is up</p>"){
           clearInterval(interID);
         }
-  		}
-  		,1000)
-  	} else {
-  	   this.innerHTML = value;
-  	}
+      }
+      ,1000)
+    } else {
+      this.innerHTML = value;
+    }
   };
   return el;
 }
