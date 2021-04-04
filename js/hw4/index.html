@@ -1,0 +1,103 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS | Homework 4</title>
+  <script src = "script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id = "modalInfo" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="center">Описание модели</h3>
+        </div>
+        <div id = "modalInfoBody" class="modal-body">
+        </div>
+      </div>
+    </div>
+    <div id = "modalCreate" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="center">Добавление модели</h3>
+        </div>
+        <div class="modal-body">
+          <label for="selectType">Выберите тип:</label>
+          <select id="selectType">
+            <option value="Ноутбук">Ноутбук</option>
+            <option value="Сервер">Сервер</option>
+          </select><br>
+          <h3>Общее:</h3>
+          <label for="inputName">Укажите название модели:</label>
+          <input id="inputName" required>
+          <label for="inputCPU">Укажите процессор:</label>
+          <input id="inputCPU" required><br>
+          <label for="inputVideoCard">Укажите видеокарту:</label>
+          <input id="inputVideoCard" required><br>
+          <label for="selectRamType">Выберите тип RAM:</label>
+          <select id="selectRamType">
+            <option value="DDR3">DDR3</option>
+            <option value="DDR4">DDR4</option>
+          </select><br>
+          <label for="inputRamSize">Укажите объём RAM :</label>
+          <input id="inputRamSize" required><span class="light-text">(GB)</span><br>
+          <label for="selectDriveType">Выберите тип памяти:</label>
+          <select id="selectDriveType">
+            <option value="HDD">HDD</option>
+            <option value="SSD">SSD</option>
+          </select><br>
+          <label for="inputDriveSize">Укажите объём памяти:</label>
+          <input id="inputDriveSize" required><span class="light-text">(GB)</span>
+          <div id="dynamicDiv">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div id="modalBtn" class="center"><button type="submit">Добавить</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div id ="main">
+      <div id="header">
+        <span id="caption">Таблица компьютеров</span>
+      </div>
+
+      <div id="body">
+        <table id="table">
+          <thead>
+          <tr>
+            <td>
+              Название модели
+            </td>
+            <td>
+              Тип
+            </td>
+            <td>
+              Производитель
+            </td>
+            <td>
+              Процессор
+            </td>
+            <td>
+              Видеокарта
+            </td>
+            <td>
+              Память
+            </td>
+            <td>
+              ОЗУ
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <thead>
+          <tbody id ="tbody" >
+          </tbody>
+          </thead>
+        </table>
+        <a id="createButton">Добавить</a>
+      </div>
+    </div>
+</body>
+</html>
