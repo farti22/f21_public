@@ -300,6 +300,7 @@ function editModalOptions( type, menu, obj = {} ){
       arrInputs = [ ...arrInputs, ...[obj.getServerRack, obj.getPowerSupply]];
       arrSelects = [ ...arrSelects, ...[obj.getCreator, obj.getPCIExt]];
     }
+	
     for( let i in arrInputs){
       inputs[i].value = arrInputs[i];
     }
@@ -345,6 +346,7 @@ window.addEventListener('load', function () {
   let table = document.getElementById("tbody");
   let tempObjIndex = 0
   inputs.innerHTML = htmlInputUltrabook;
+  
   table.addEventListener('click', function () {
     let unbtn = event.target;
     let tr = unbtn.parentElement.parentElement
@@ -372,7 +374,6 @@ window.addEventListener('load', function () {
 
   modalBtn.onclick = function(){
     let btn = modalMenu.children[0].children[2].children[0].innerHTML;
-
     let arr = [
       document.getElementById( "inputName").value,
       document.getElementById( "selectCreator").value,
@@ -427,11 +428,14 @@ window.addEventListener('load', function () {
         list[tempObjIndex] = server;
       }
     }
+	
     updateStorage(list);
     table.innerHTML = '';
+	
     for (let obj of list) {
       addToTable(obj);
     }
+	
     modalMenu.style.display = "none";
   }
 
